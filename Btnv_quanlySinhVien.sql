@@ -42,3 +42,12 @@ Select stt, mark from mark order by mark  desc;
 ALTER TABLE subject CHANGE COLUMN `SubjectName` `SubjectName` NVARCHAR(255) NULL DEFAULT NULL ; 
 -- Cau 7:
 UPDATE subject SET `SubjectName` = concat("<<Day la mon hoc>>",(select SubjectName subject where SubjectID=1) );
+-- Cau 8"
+ ALTER TABLE student  add check(age>15 and age<50);
+ -- cau 10 :
+ delete  from student where studentID =1;
+ delete  from student where StudentName="Nguyen Quang An";
+-- CAU 11:
+ALTER TABLE student ADD COLUMN `Status` BIT NULL DEFAULT 1 AFTER `Email`; 
+ -- CAU 12:
+ UPDATE student set status = 0 ;
