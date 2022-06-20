@@ -1,0 +1,1 @@
+SELECT * FROM thaotacjoin_youtube.orders;
